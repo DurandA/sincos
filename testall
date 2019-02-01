@@ -14,4 +14,7 @@ iverilog -g2 -s top sincos.v
 ./a.out > verilog.output
 diff -w verilog.output golden
 
+python sincos_migen.py > migen.output
+diff -w migen.output golden
+
 python measure.py
